@@ -55,7 +55,7 @@ li {
   border-radius: 4px;
   background-color: #2196f3;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  color: #fff;
+  color: var(--title-color);
   text-align: center;
   font-size: 16px;
   font-style: normal;
@@ -126,7 +126,7 @@ li {
   letter-spacing: 0.78px;
 }
 .footer-address {
-  color: #fff;
+  color: var(--footer-color);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
