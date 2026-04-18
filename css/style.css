@@ -5,15 +5,14 @@
   --logo-color: #000;
   --title-color: #fff;
   --footer-color: rgba(255, 255, 255, 0.6);
+  --background-color:#2F303A;
+  --team-background-color: #f5f4fa;
 }
-body {
+body {  
   font-family: "Roboto", sans-serif;
 }
-a{
-  text-decoration: none;
-}
-li {
-  list-style: none;
+.header {
+    background-color: var(--title-color);
 }
 .header-logo {
   color: var(--logo-color);
@@ -43,6 +42,9 @@ li {
   line-height: 1.14;
   letter-spacing: 0.28px;
 }
+.hero {
+  background-color: var(--background-color);
+}
 .hero-title {
   flex-shrink: 0;
   color: var(--title-color);
@@ -55,6 +57,7 @@ li {
   text-transform: uppercase;
 }
 .hero-button {
+  border: none;
   border-radius: 4px;
   background-color: #2196f3;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
@@ -66,6 +69,10 @@ li {
   line-height: 30px;
   letter-spacing: 0.96px;
 }
+.advantages {
+    background-color: var(--title-color);
+}
+
 .advantages-subtitle {
   color: var(--main-color);
   font-size: 14px;
@@ -83,6 +90,9 @@ li {
   line-height: 24px;
   letter-spacing: 0.42px;
 }
+.work {
+    background-color: var(--title-color);
+}
 .work-title {
   color: var(--main-color);
   text-align: center;
@@ -91,6 +101,9 @@ li {
   font-weight: 700;
   line-height: 1.16;
   letter-spacing: 1.08px;
+}
+.team {
+    background-color: var(--team-background-color);
 }
 .team-title {
   color: var(--main-color);
@@ -119,6 +132,9 @@ li {
   line-height: 1.18;
   letter-spacing: 0.48px;
 }
+.footer {
+    background-color: var(--background-color);
+}
 .footer-logo {
   color: var(--logo-color);
   font-family: "Raleway", sans-serif;
@@ -127,6 +143,9 @@ li {
   font-weight: 700;
   line-height: 1.19;
   letter-spacing: 0.78px;
+}
+.footer-span {
+  color: var(--accient-color);
 }
 .footer-address {
   color: var(--footer-color);
@@ -145,6 +164,7 @@ li {
   letter-spacing: 0.42px;
 }
 .filter-btn {
+  border: none;
   border-radius: 4px;
   background: #f5f4fa;
   color: var(--main-color);
