@@ -136,7 +136,7 @@ body {
     background-color: var(--background-color);
 }
 .footer-logo {
-  color: var(--logo-color);
+  color: var(--title-color);
   font-family: "Raleway", sans-serif;
   font-size: 26px;
   font-style: normal;
