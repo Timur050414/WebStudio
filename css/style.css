@@ -8,6 +8,7 @@
   --background-color: #2f303a;
   --team-background-color: #f5f4fa;
   --portfolio-border-color: #ececec;
+  --overlay-color: rgba(33, 150, 243, 0.9);
 }
 
 body {
@@ -15,21 +16,19 @@ body {
   color: var(--main-color);
 }
 
-/* --- КОНТЕЙНЕР --- */
+/* --- container --- */
 .container {
   width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
-/* --- ШАПКА --- */
-
+/* --- header --- */
 .header-container {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var();
+  border-bottom: 1px solid var(--portfolio-border-color);
 }
-
 
 .header-nav {
   display: flex;
@@ -42,24 +41,17 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 26px;
   font-weight: 700;
-  margin-right: 0;  
+  margin-right: 0;
 }
 
 .header-span {
   color: var(--accient-color);
 }
 
-.header-list, .header-contacts {
+.header-list,
+.header-contacts {
   display: flex;
   gap: 50px;
-}
-
-.header-link:hover {
-  color: var(--accient-color);
-}
-
-.header-contact:hover {
-  color: var(--accient-color);
 }
 
 .header-link {
@@ -68,6 +60,27 @@ body {
   font-weight: 500;
   padding: 32px 0;
   display: block;
+  position: relative;
+}
+
+.header-link:hover,
+.header-link:focus {
+  color: var(--accient-color);
+}
+
+.header-link.current {
+  color: var(--accient-color);
+}
+
+.header-link.current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accient-color);
+  border-radius: 2px;
 }
 
 .header-contacts {
@@ -80,7 +93,12 @@ body {
   font-weight: 500;
 }
 
-/* --- HERO --- */
+.header-contact:hover,
+.header-contact:focus {
+  color: var(--accient-color);
+}
+
+/* --- hero --- */
 .hero {
   background-color: var(--background-color);
   padding: 200px 0;
@@ -105,9 +123,10 @@ body {
   border-radius: 4px;
   padding: 10px 32px;
   border: none;
+  cursor: pointer;
 }
 
-/* --- ПЕРЕВАГИ --- */
+/* --- advantages --- */
 .advantages {
   padding: 94px 0;
 }
@@ -134,7 +153,7 @@ body {
   line-height: 1.71;
 }
 
-/* --- КОМАНДА --- */
+/* --- ЧИМ ЗАЙМАЄМОСЯ --- */
 .work {
   padding-bottom: 94px;
 }
@@ -146,11 +165,13 @@ body {
   margin-bottom: 50px;
 }
 
-.work-list, .team-list {
+.work-list,
+.team-list {
   display: flex;
   gap: 30px;
 }
 
+/* --- КОМАНДА --- */
 .team {
   background-color: var(--team-background-color);
   padding: 94px 0;
@@ -160,6 +181,10 @@ body {
   background-color: #fff;
   border-radius: 0px 0px 4px 4px;
   text-align: center;
+  box-shadow:
+    0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .team-name {
@@ -173,10 +198,9 @@ body {
   margin-bottom: 30px;
 }
 
-/* --- ПОРТФОЛІО--- */
-.portfolio { 
-  padding: 94px 0; 
-  border-top: 1px solid var(--portfolio-border-color);
+/* --- ПОРТФОЛІО (СТОРІНКА) --- */
+.portfolio {
+  padding: 94px 0;
 }
 
 .filter-list {
@@ -195,12 +219,18 @@ body {
   padding: 6px 22px;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
 }
 
-.filter-btn.active, .filter-btn:hover {
+.filter-btn.active,
+.filter-btn:hover,
+.filter-btn:focus {
   background-color: var(--accient-color);
   color: #fff;
-  box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.10), 0 1px 2px 0 rgba(0, 0, 0, 0.08), 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+  box-shadow:
+    0 3px 1px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.08),
+    0 2px 2px 0 rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-list {
@@ -213,6 +243,36 @@ body {
   background: #ffffff;
   border: 1px solid #eeeeee;
   max-width: 370px;
+}
+
+.portfolio-item:hover {
+  box-shadow:
+    0 1px 1px 0 rgba(0, 0, 0, 0.12),
+    0 4px 4px 0 rgba(0, 0, 0, 0.06),
+    1px 4px 6px 0 rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-thumb {
+  position: relative;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-color);
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 28px;
+  padding: 63px 24px;
+  margin: 0;
+  display: none;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  display: block;
 }
 
 .portfolio-wrapper {
@@ -231,7 +291,8 @@ body {
   font-size: 16px;
   line-height: 1.88;
 }
-/* --- ФУТЕР --- */
+
+/* --- ФУТЕР (ПІДВАЛ) --- */
 .footer {
   background-color: var(--background-color);
   padding: 60px 0;
