@@ -9,6 +9,8 @@
   --team-background-color: #f5f4fa;
   --portfolio-border-color: #ececec;
   --overlay-color: rgba(33, 150, 243, 0.9);
+  --anim-duration: 250ms;
+  --anim-timing: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -16,14 +18,12 @@ body {
   color: var(--main-color);
 }
 
-/* --- container --- */
 .container {
   width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
-/* --- header --- */
 .header-container {
   display: flex;
   align-items: center;
@@ -61,6 +61,7 @@ body {
   padding: 32px 0;
   display: block;
   position: relative;
+  transition: color var(--anim-duration) var(--anim-timing);
 }
 
 .header-link:hover,
@@ -81,6 +82,8 @@ body {
   height: 4px;
   background-color: var(--accient-color);
   border-radius: 2px;
+  transform: scaleX(1);
+  transition: transform var(--anim-duration) var(--anim-timing);
 }
 
 .header-contacts {
@@ -91,6 +94,7 @@ body {
   color: var(--text-color);
   font-size: 14px;
   font-weight: 500;
+  transition: color var(--anim-duration) var(--anim-timing);
 }
 
 .header-contact:hover,
@@ -98,7 +102,6 @@ body {
   color: var(--accient-color);
 }
 
-/* --- hero --- */
 .hero {
   background-color: var(--background-color);
   padding: 200px 0;
@@ -124,9 +127,14 @@ body {
   padding: 10px 32px;
   border: none;
   cursor: pointer;
+  transition: background-color var(--anim-duration) var(--anim-timing);
 }
 
-/* --- advantages --- */
+.hero-button:hover,
+.hero-button:focus {
+  background-color: #188ce8;
+}
+
 .advantages {
   padding: 94px 0;
 }
@@ -153,7 +161,6 @@ body {
   line-height: 1.71;
 }
 
-/* --- ЧИМ ЗАЙМАЄМОСЯ --- */
 .work {
   padding-bottom: 94px;
 }
@@ -171,7 +178,6 @@ body {
   gap: 30px;
 }
 
-/* --- КОМАНДА --- */
 .team {
   background-color: var(--team-background-color);
   padding: 94px 0;
@@ -198,7 +204,6 @@ body {
   margin-bottom: 30px;
 }
 
-/* --- ПОРТФОЛІО (СТОРІНКА) --- */
 .portfolio {
   padding: 94px 0;
 }
@@ -220,6 +225,9 @@ body {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color var(--anim-duration) var(--anim-timing),
+              color var(--anim-duration) var(--anim-timing),
+              box-shadow var(--anim-duration) var(--anim-timing);
 }
 
 .filter-btn.active,
@@ -243,9 +251,12 @@ body {
   background: #ffffff;
   border: 1px solid #eeeeee;
   max-width: 370px;
+  transition: transform var(--anim-duration) var(--anim-timing),
+              box-shadow var(--anim-duration) var(--anim-timing);
 }
 
 .portfolio-item:hover {
+  transform: translateY(-4px);
   box-shadow:
     0 1px 1px 0 rgba(0, 0, 0, 0.12),
     0 4px 4px 0 rgba(0, 0, 0, 0.06),
@@ -254,6 +265,15 @@ body {
 
 .portfolio-thumb {
   position: relative;
+  overflow: hidden;
+}
+
+.portfolio-thumb img {
+  transition: transform var(--anim-duration) var(--anim-timing);
+}
+
+.portfolio-item:hover .portfolio-thumb img {
+  transform: scale(1.04);
 }
 
 .portfolio-overlay {
@@ -268,11 +288,15 @@ body {
   line-height: 28px;
   padding: 63px 24px;
   margin: 0;
-  display: none;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform var(--anim-duration) var(--anim-timing),
+              opacity var(--anim-duration) var(--anim-timing);
 }
 
 .portfolio-item:hover .portfolio-overlay {
-  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .portfolio-wrapper {
@@ -292,7 +316,6 @@ body {
   line-height: 1.88;
 }
 
-/* --- ФУТЕР (ПІДВАЛ) --- */
 .footer {
   background-color: var(--background-color);
   padding: 60px 0;
@@ -314,6 +337,12 @@ body {
 
 .footer-address {
   color: var(--title-color);
+  transition: color var(--anim-duration) var(--anim-timing);
+}
+
+.footer-address:hover,
+.footer-address:focus {
+  color: var(--accient-color);
 }
 
 .footer-span {
@@ -322,4 +351,10 @@ body {
 
 .footer-link {
   color: var(--footer-color);
+  transition: color var(--anim-duration) var(--anim-timing);
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--accient-color);
 }
