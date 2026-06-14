@@ -290,13 +290,25 @@ body {
   margin: 0;
   opacity: 0;
   transform: translateY(100%);
-  transition: transform var(--anim-duration) var(--anim-timing),
-              opacity var(--anim-duration) var(--anim-timing);
+}
+
+@keyframes slideUpOverlay {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(-5%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .portfolio-item:hover .portfolio-overlay {
-  opacity: 1;
-  transform: translateY(0);
+  animation: slideUpOverlay var(--anim-duration) var(--anim-timing) forwards;
 }
 
 .portfolio-wrapper {
