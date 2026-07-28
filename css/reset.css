@@ -15,10 +15,14 @@ p {
 }
 img {
   display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 address {
   font-style: normal;
 }
 button {
   cursor: pointer;
+  border: none;
 }
