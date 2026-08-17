@@ -10,6 +10,8 @@
   --portfolio-border-color: #ececec;
   --overlay-color: rgba(33, 150, 243, 0.9);
   --anim-duration: 250ms;
+  --border-right: rgba(33, 33, 33, 0.2);
+
   --anim-timing: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -113,6 +115,10 @@ body {
   height: 40px;
 }
 
+.open-modal {
+  background-color: transparent;
+}
+
 .hero {
   background-color: var(--background-color);
   padding: 118px 0;
@@ -167,7 +173,7 @@ body {
   background: var(--team-background-color);
 }
 
-.icon {
+.advantages-img {
   width: 70px;
   height: 70px;
 }
@@ -471,6 +477,104 @@ body {
   color: var(--accient-color);
 }
 
+/* Backdrop & Modal */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity var(--anim-duration) var(--anim-timing),
+    visibility var(--anim-duration) var(--anim-timing);
+  z-index: 100;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--title-color);
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Кнопка закриття */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  font-size: 19px;
+}
+
+/* Наповнення меню */
+.mobile-menu-link {
+  font-weight: 500;
+  font-size: 40px;
+  color: var(--main-color);
+  display: block;
+  margin-bottom: 32px;
+}
+
+.last {
+  margin-bottom: 302px;
+}
+
+.mobile-menu-link.current {
+  color: var(--accient-color);
+  margin-bottom: 35px;
+}
+
+.mobile-tel {
+  display: block;
+  font-weight: 500;
+  font-size: 34px;
+  color: var(--accient-color);
+  letter-spacing: 0.68px;
+  margin-bottom: 32px;
+}
+
+.mobile-email {
+  display: block;
+  font-weight: 500;
+  font-size: 24px;
+  color: var(--text-color);
+  margin-bottom: 64px;
+  letter-spacing: 0.48px;
+}
+
+.mobile-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.mobile-social-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.36px;
+  color: var(--accient-color);
+  padding-right: 10px;
+  border-right: 1px solid var(--border-right);
+}
+
+.mobile-socials li:last-child .mobile-social-link {
+  border-right: none;
+}
+
 @media (min-width: 480px) {
   .container {
     width: 480px;
@@ -566,6 +670,10 @@ body {
   .portfolio-thumb img {
     width: 100%;
     height: 100%;
+  }
+
+  .backdrop {
+    display: none;
   }
 }
 

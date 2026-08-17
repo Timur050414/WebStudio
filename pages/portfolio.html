@@ -31,7 +31,9 @@
                 <li><a href="mailto:info@devstudio.com" class="header-contact">info@devstudio.com</a></li>
                 <li><a href="tel:+380961111111" class="header-contact">+38 096 111 11 11</a></li>
             </ul>
-            <img src="../img/menu.png" alt="menu" class="menu-img">
+            <button class="open-modal" type="button" data-modal-open>
+                <img src="../img/menu.png" alt="menu" class="menu-img">
+            </button>
         </div>
     </header>
 
@@ -181,7 +183,30 @@
             </address>
         </div>
     </footer>
-
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="close" type="button" data-modal-close>X</button>
+    
+            <ul class="mobile-menu">
+                <li><a href="../index.html" class="mobile-menu-link">Студія</a></li>
+                <li><a href="../pages/portfolio.html" class="mobile-menu-link current">Портфоліо</a></li>
+                <li><a href="#" class="mobile-menu-link last">Контакти</a></li>
+            </ul>
+    
+            <div class="mobile-contacts">
+                <a href="tel:+380961111111" class="mobile-tel">+38 096 111 11 11</a>
+                <a href="mailto:info@devstudio.com" class="mobile-email">info@devstudio.com</a>
+            </div>
+    
+            <ul class="mobile-socials">
+                <li><a href="#" class="mobile-social-link">Instagram</a></li>
+                <li><a href="#" class="mobile-social-link">Twitter</a></li>
+                <li><a href="#" class="mobile-social-link">Facebook</a></li>
+                <li><a href="#" class="mobile-social-link">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../js/modal.js"></script>
 </body>
 
 </html>
