@@ -120,9 +120,7 @@ body {
 }
 
 .hero {
-  background-color: var(--background-color);
   padding: 118px 0;
-  text-align: center;
 }
 
 .hero-title {
@@ -146,6 +144,7 @@ body {
   letter-spacing: 0.96px;
   border-radius: 4px;
   padding: 10px 24px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   transition: background-color var(--anim-duration) var(--anim-timing);
 }
 
@@ -228,9 +227,9 @@ body {
   border-radius: 0px 0px 4px 4px;
   text-align: center;
   box-shadow:
-    0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+    0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 2px 1px 0 rgba(0, 0, 0, 0.2);
 }
 
 .team-name {
@@ -477,7 +476,6 @@ body {
   color: var(--accient-color);
 }
 
-/* Backdrop & Modal */
 .backdrop {
   position: fixed;
   top: 0;
@@ -510,7 +508,6 @@ body {
   flex-direction: column;
 }
 
-/* Кнопка закриття */
 .close {
   position: absolute;
   top: 10px;
@@ -519,7 +516,6 @@ body {
   font-size: 19px;
 }
 
-/* Наповнення меню */
 .mobile-menu-link {
   font-weight: 500;
   font-size: 40px;
@@ -711,7 +707,12 @@ body {
   }
   /* ---hero--- */
   .hero {
+    background-image: url(../img/hero-bg.jpg);
     padding: 200px 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
   }
   .hero-title {
     font-size: 44px;
@@ -823,5 +824,9 @@ body {
 
   .portfolio-wrapper {
     padding: 20px 24px;
+  }
+
+  .backdrop {
+    display: none;
   }
 }
