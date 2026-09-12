@@ -10,7 +10,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+        integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/reset.css">
 </head>
@@ -28,27 +30,27 @@
                 </ul>
             </nav>
             <ul class="header-contacts">
-                <li><a href="mailto:info@devstudio.com" class="header-contact">
-                        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M14.5 0H1.50001C0.672854 0 0 0.672853 0 1.50001V10.5C0 11.3271 0.672854 12 1.50001 12H14.5C15.3271 12 16 11.3271 16 10.5V1.50001C16 0.672853 15.3271 0 14.5 0ZM14.5 0.999994C14.5679 0.999994 14.6325 1.01409 14.6916 1.0387L8 6.83838L1.30833 1.0387C1.36742 1.01412 1.43204 0.999994 1.49998 0.999994H14.5ZM14.5 11H1.50001C1.22414 11 0.999996 10.7759 0.999996 10.5V2.09521L7.67236 7.87792C7.76661 7.95944 7.8833 7.99999 8 7.99999C8.1167 7.99999 8.23339 7.95948 8.32764 7.87792L15 2.09521V10.5C15 10.7759 14.7759 11 14.5 11Z"
-                                fill="var(--text-color)" />
+                <li>
+                    <a href="mailto:info@devstudio.com" class="header-contact">
+                        <svg class="header-icons">
+                            <use href="./img/symbol-defs.svg#envelope"></use>
                         </svg>
                         info@devstudio.com
-                </li></a>
-                <li><a href="tel:+380961111111" class="header-contact">
-                        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M8.5 0H1.5C0.672848 0 0 0.672848 0 1.5V14.5C0 15.3272 0.672848 16 1.5 16H8.5C9.32715 16 10 15.3272 10 14.5V1.5C10 0.672848 9.32715 0 8.5 0ZM1.5 1H8.5C8.77588 1 9 1.22412 9 1.5V12H1V1.5C1 1.22412 1.22412 1 1.5 1ZM8.5 15H1.5C1.22412 15 1 14.7759 1 14.5V13H9V14.5C9 14.7759 8.77588 15 8.5 15Z"
-                                fill="var(--text-color)" />
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:+380961111111" class="header-contact">
+                        <svg class="header-icons">
+                            <use href="./img/symbol-defs.svg#smartphone"></use>
                         </svg>
                         +38 096 111 11 11
-                </li></a>
+                    </a>
+                </li>
             </ul>
             <button class="open-modal" type="button" data-modal-open>
                 <img src="./img/menu.png" alt="menu" class="menu-img">
             </button>
-            
+
         </div>
     </header>
 
@@ -142,14 +144,32 @@
                         <h3 class="team-name">Ігор Дем'яненко</h3>
                         <p class="team-role">Product Designer</p>
                         <ul class="contacts-team-list">
-                            <li class="contacts-team-item"><img src="./img/instagram.png" alt="instagram"
-                                    class="team-contacts"></li>
-                            <li class="contacts-team-item"><img src="./img/twitter.png" alt="twitter"
-                                    class="team-contacts"></li>
-                            <li class="contacts-team-item"><img src="./img/facebook.png" alt="facebook"
-                                    class="team-contacts"></li>
-                            <li class="contacts-team-item"><img src="./img/linkedin.png" alt="linkedin"
-                                    class="team-contacts"></li>
+                            <li class="contacts-team-item">
+                                <a href="#" class="team-contacts">
+                                    <svg class="team-icons">
+                                        <use href="./img/symbol-defs.svg#instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="contacts-team-item">
+                                <a href="#" class="team-contacts">
+                                    <svg class="team-icons">
+                                        <use href="./img/symbol-defs.svg#twitter"></use>
+                                    </svg>
+                                </a>
+                            </li><li class="contacts-team-item">
+                                <a href="#" class="team-contacts">
+                                    <svg class="team-icons">
+                                        <use href="./img/symbol-defs.svg#facebook"></use>
+                                    </svg>
+                                </a>
+                            </li><li class="contacts-team-item">
+                                <a href="#" class="team-contacts">
+                                    <svg class="team-icons">
+                                        <use href="./img/symbol-defs.svg#linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li class="team-item">
@@ -157,14 +177,34 @@
                         <h3 class="team-name">Ольга Рєпіна</h3>
                         <p class="team-role">Frontend Developer</p>
                         <ul class="contacts-team-list">
-                            <li class="contacts-team-item"><img src="./img/instagram.png" alt="instagram"
-                                    class="team-contacts"></li>
-                            <li class="contacts-team-item"><img src="./img/twitter.png" alt="twitter"
-                                    class="team-contacts"></li>
-                            <li class="contacts-team-item"><img src="./img/facebook.png" alt="facebook"
-                                    class="team-contacts"></li>
-                            <li class="contacts-team-item"><img src="./img/linkedin.png" alt="linkedin"
-                                    class="team-contacts"></li>
+                            <li class="contacts-team-item">
+                                <a href="#" class="team-contacts">
+                                    <svg class="team-icons">
+                                        <use href="./img/symbol-defs.svg#instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="contacts-team-item">
+                                <a href="#" class="team-contacts">
+                                    <svg class="team-icons">
+                                        <use href="./img/symbol-defs.svg#twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="contacts-team-item">
+                                <a href="#" class="team-contacts">
+                                    <svg class="team-icons">
+                                        <use href="./img/symbol-defs.svg#facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="contacts-team-item">
+                                <a href="#" class="team-contacts">
+                                    <svg class="team-icons">
+                                        <use href="./img/symbol-defs.svg#linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li class="team-item">
@@ -172,14 +212,34 @@
                         <h3 class="team-name">Микола Тарасов</h3>
                         <p class="team-role">Marketing</p>
                         <ul class="contacts-team-list">
-                            <li class="contacts-team-item"><img src="./img/instagram.png" alt="instagram"
-                                    class="team-contacts"></li>
-                            <li class="contacts-team-item"><img src="./img/twitter.png" alt="twitter"
-                                    class="team-contacts"></li>
-                            <li class="contacts-team-item"><img src="./img/facebook.png" alt="facebook"
-                                    class="team-contacts"></li>
-                            <li class="contacts-team-item"><img src="./img/linkedin.png" alt="linkedin"
-                                    class="team-contacts"></li>
+                            <li class="contacts-team-item">
+                                <a href="#" class="team-contacts">
+                                    <svg class="team-icons">
+                                        <use href="./img/symbol-defs.svg#instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="contacts-team-item">
+                                <a href="#" class="team-contacts">
+                                    <svg class="team-icons">
+                                        <use href="./img/symbol-defs.svg#twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="contacts-team-item">
+                                <a href="#" class="team-contacts">
+                                    <svg class="team-icons">
+                                        <use href="./img/symbol-defs.svg#facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="contacts-team-item">
+                                <a href="#" class="team-contacts">
+                                    <svg class="team-icons">
+                                        <use href="./img/symbol-defs.svg#linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li class="team-item">
@@ -187,14 +247,34 @@
                         <h3 class="team-name">Михайло Єрмаков</h3>
                         <p class="team-role">UI Designer</p>
                         <ul class="contacts-team-list">
-                            <li class="contacts-team-item"><img src="./img/instagram.png" alt="instagram"
-                                    class="team-contacts"></li>
-                            <li class="contacts-team-item"><img src="./img/twitter.png" alt="twitter"
-                                    class="team-contacts"></li>
-                            <li class="contacts-team-item"><img src="./img/facebook.png" alt="facebook"
-                                    class="team-contacts"></li>
-                            <li class="contacts-team-item"><img src="./img/linkedin.png" alt="linkedin"
-                                    class="team-contacts"></li>
+                            <li class="contacts-team-item">
+                                <a href="#" class="team-contacts">
+                                    <svg class="team-icons">
+                                        <use href="./img/symbol-defs.svg#instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="contacts-team-item">
+                                <a href="#" class="team-contacts">
+                                    <svg class="team-icons">
+                                        <use href="./img/symbol-defs.svg#twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="contacts-team-item">
+                                <a href="#" class="team-contacts">
+                                    <svg class="team-icons">
+                                        <use href="./img/symbol-defs.svg#facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="contacts-team-item">
+                                <a href="#" class="team-contacts">
+                                    <svg class="team-icons">
+                                        <use href="./img/symbol-defs.svg#linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -203,28 +283,50 @@
         <section class="clients">
             <div class="container">
                 <h2 class="clients-title">Постійні клієнти</h2>
-                <div class="clients-images">
-                    <ul class="clients-list">
-                        <li class="clients-item">
-                            <img src="./img/logo-one.png" alt="logo-one" class="clients-image">
-                        </li>
-                        <li class="clients-item">
-                            <img src="./img/logo-two.png" alt="logo-two" class="clients-image">
-                        </li>
-                        <li class="clients-item">
-                            <img src="./img/logo-three.png" alt="logo-three" class="clients-image">
-                        </li>
-                        <li class="clients-item">
-                            <img src="./img/logo-four.png" alt="logo-four" class="clients-image">
-                        </li>
-                        <li class="clients-item">
-                            <img src="./img/logo-five.png" alt="logo-five" class="clients-image">
-                        </li>
-                        <li class="clients-item">
-                            <img src="./img/logo-six.png" alt="logo-six" class="clients-image">
-                        </li>
-                    </ul>
-                </div>
+                <ul class="clients-list">
+                    <li class="client-item">
+                        <a href="" class="client-link">
+                            <svg class="client-icon">
+                                <use href="./img/symbol-defs.svg#logo-one"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="client-item">
+                        <a href="" class="client-link">
+                            <svg class="client-icon">
+                                <use href="./img/symbol-defs.svg#logo-two"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="client-item">
+                        <a href="" class="client-link">
+                            <svg class="client-icon">
+                                <use href="./img/symbol-defs.svg#logo-three"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="client-item">
+                        <a href="" class="client-link">
+                            <svg class="client-icon">
+                                <use href="./img/symbol-defs.svg#logo-four"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="client-item">
+                        <a href="" class="client-link">
+                            <svg class="client-icon">
+                                <use href="./img/symbol-defs.svg#logo-five"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="client-item">
+                        <a href="" class="client-link">
+                            <svg class="client-icon">
+                                <use href="./img/symbol-defs.svg#logo-six"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
     </main>
@@ -246,18 +348,18 @@
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button class="close" type="button" data-modal-close>X</button>
-    
+
             <ul class="mobile-menu">
                 <li><a href="./index.html" class="mobile-menu-link current">Студія</a></li>
                 <li><a href="./pages/portfolio.html" class="mobile-menu-link">Портфоліо</a></li>
                 <li><a href="#" class="mobile-menu-link last">Контакти</a></li>
             </ul>
-    
+
             <div class="mobile-contacts">
                 <a href="tel:+380961111111" class="mobile-tel">+38 096 111 11 11</a>
                 <a href="mailto:info@devstudio.com" class="mobile-email">info@devstudio.com</a>
             </div>
-    
+
             <ul class="mobile-socials">
                 <li><a href="#" class="mobile-social-link">Instagram</a></li>
                 <li><a href="#" class="mobile-social-link">Twitter</a></li>

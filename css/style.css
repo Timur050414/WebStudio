@@ -10,6 +10,7 @@
   --portfolio-border-color: #ececec;
   --overlay-color: rgba(33, 150, 243, 0.9);
   --anim-duration: 250ms;
+  --icons-fill: #afb1b8;
   --border-right: rgba(33, 33, 33, 0.2);
 
   --anim-timing: cubic-bezier(0.4, 0, 0.2, 1);
@@ -95,6 +96,19 @@ body {
   display: none;
 }
 
+.header-icons {
+  width: 16px;
+  height: 12px;
+  fill: var(--icons-fill);
+}
+
+.header-contacts li:last-child {
+  .header-icons {
+    width: 10px;
+    height: 16px;
+  }
+}
+
 .header-contact {
   color: var(--text-color);
   display: flex;
@@ -121,6 +135,19 @@ body {
 
 .hero {
   padding: 118px 0;
+  background-image: linear-gradient(rgb(47, 48, 58, 0.4), rgb(47, 48, 58, 0.4)), url(../img/mobile/hero-mobile@1x.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-device-pixel-ratio: 2),
+       (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi),
+       (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgb(47, 48, 58, 0.4), rgb(47, 48, 58, 0.4)), url(../img/mobile/hero-mobile@2x.webp);
+  }
 }
 
 .hero-title {
@@ -205,8 +232,7 @@ body {
   margin-bottom: 30px;
 }
 
-.work-list,
-.team-list {
+.work-list {
   display: flex;
   gap: 30px;
 }
@@ -243,26 +269,34 @@ body {
   margin-bottom: 16px;
 }
 
+.team-icons {
+  width: 20px;
+  height: 20px;
+  fill: var(--icons-fill);
+}
+
 .contacts-team-list {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 304ccpx;
   margin-bottom: 30px;
 }
 
-.contacts-team-item {
-  border-radius: 50%;
-  contain-intrinsic-inline-size: var(--accient-color);
-}
-
 .team-contacts {
-  width: 20px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
 }
 
 .team-contacts:hover {
   background: var(--accient-color);
-  border-radius: 50%;
+  .team-icons {
+    fill: var(--title-color);
+  }
 }
 
 .clients {
@@ -285,10 +319,27 @@ body {
   gap: 30px;
 }
 
-.clients-item {
+.client-link {
   border-radius: 4px;
-  border: 1px solid #afb1b8;
-  padding: 16px 52px;
+  border: 1px solid var(--icons-fill);
+  width: 170px;
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-link:hover {
+  border-color: var(--accient-color);
+  .client-icon {
+    fill: var(--accient-color);
+  }
+}
+
+.client-icon {
+  width: 106px;
+  height: 60px;
+  fill: var(--icons-fill);
 }
 
 .portfolio {
@@ -610,6 +661,17 @@ body {
     display: flex;
     align-items: center;
   }
+  .hero {
+    background-image: linear-gradient(rgb(47, 48, 58, 0.4), rgb(47, 48, 58, 0.4)), url(../img/tablet/hero-tablet@1x.webp);
+  }
+  @media (min-device-pixel-ratio: 2),
+       (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi),
+       (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgb(47, 48, 58, 0.4), rgb(47, 48, 58, 0.4)), url(../img/tablet/hero-tablet@2x.webp);
+  }
+}
   /* ---advantages--- */
   .advantages-list {
     display: grid;
@@ -707,14 +769,19 @@ body {
   }
   /* ---hero--- */
   .hero {
-    background-image: url(../img/hero-bg.jpg);
-    padding: 200px 0;
-    background-color: rgba(47, 48, 58, 0.40);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     text-align: center;
+    padding: 200px 0;
+    background-image: linear-gradient(rgb(47, 48, 58, 0.4), rgb(47, 48, 58, 0.4)), url(../img/desktop/hero-desktop@1x.webp);
+    
   }
+  @media (min-device-pixel-ratio: 2),
+       (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi),
+       (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgb(47, 48, 58, 0.4), rgb(47, 48, 58, 0.4)), url(../img/desktop/hero-desktop@2x.webp);
+  }
+}
   .hero-title {
     font-size: 44px;
     line-height: 60px;
@@ -768,7 +835,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 24px;
+    gap: 10px;
     margin-bottom: 30px;
   }
   .team-list {
@@ -786,7 +853,8 @@ body {
   }
   .clients-list {
     display: flex;
-    gap: 30px;
+    justify-content: center;
+    align-items: center;
   }
   .clients-item {
     padding: 16px 32px;
