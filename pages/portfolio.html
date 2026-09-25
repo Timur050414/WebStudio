@@ -3,14 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфоліо</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+        integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -23,17 +25,34 @@
             <nav class="header-nav">
                 <ul class="header-list">
                     <li><a href="../index.html" class="header-link">Студія</a></li>
-                    <li><a href="./portfolio.html" class="header-link current">Портфоліо</a></li>
+                    <li><a href="../pages/portfolio.html" class="header-link current">Портфоліо</a></li>
                     <li><a href="#" class="header-link">Контакти</a></li>
                 </ul>
             </nav>
             <ul class="header-contacts">
-                <li><a href="mailto:info@devstudio.com" class="header-contact">info@devstudio.com</a></li>
-                <li><a href="tel:+380961111111" class="header-contact">+38 096 111 11 11</a></li>
+                <li>
+                    <a href="mailto:info@devstudio.com" class="header-contact">
+                        <svg class="header-icons" aria-label="Envelope">
+                            <use href="../img/symbol-defs.svg#envelope"></use>
+                        </svg>
+                        info@devstudio.com
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:+380961111111" class="header-contact">
+                        <svg class="header-icons" aria-label="Smartphone">
+                            <use href="../img/symbol-defs.svg#smartphone"></use>
+                        </svg>
+                        +38 096 111 11 11
+                    </a>
+                </li>
             </ul>
             <button class="open-modal" type="button" data-modal-open>
-                <img src="../img/menu.png" alt="menu" class="menu-img">
+                <svg class="burger-icon" aria-label="Menu">
+                    <use href="../img/symbol-defs.svg#menu-burger"></use>
+                </svg>
             </button>
+    
         </div>
     </header>
 
@@ -52,7 +71,15 @@
                 <ul class="portfolio-list">
                     <li class="portfolio-item">
                         <div class="portfolio-thumb">
-                            <img src="../img/imglaptop.png" alt="Технокряк" width="370">
+                            <picture>
+                                <source srcset="../img/desktop/laptop-desktop@1x.webp 1x, ../img/desktop/laptop-desktop@2x.webp 2x "
+                                    media="(min-width:1200px)">
+                                <source srcset="../img/tablet/laptop-tablet@1x.webp 1x, ../img/tablet/laptop-tablet@2x.webp 2x "
+                                    media="(min-width:768px)">
+                                <source srcset="../img/mobile/laptop-mobile@1x.webp 1x, ../img/mobile/laptop-mobile@2x.webp 2x "
+                                    media="(max-width:767px)">
+                                <img src="../img/laptop.webp" alt="Технокряк" width="370">
+                            </picture>
                             <p class="portfolio-overlay">Ресурс пропонує комплексні пропозиції з різним рівнем
                                 функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про
                                 компанію чи приватну особу.</p>
@@ -65,7 +92,15 @@
 
                     <li class="portfolio-item">
                         <div class="portfolio-thumb">
-                            <img src="../img/imgbasketball.png" alt="Постер New Orlean vs Golden Star" width="370">
+                            <picture>
+                                <source srcset="../img/desktop/basketball-desktop@1x.webp 1x, ../img/desktop/basketball-desktop@2x.webp 2x "
+                                    media="(min-width:1200px)">
+                                <source srcset="../img/tablet/basketball-desktop@1x.webp 1x, ../img/tablet/basketball-tablet@2x.webp 2x "
+                                    media="(min-width:768px)">
+                                <source srcset="../img/mobile/basketball-desktop@1x.webp 1x, ../img/mobile/basketball-mobile@2x.webp 2x "
+                                    media="(max-width:767px)">
+                                <img src="../img/basketball.webp" alt="Постер New Orlean vs Golden Star" width="370">
+                            </picture>
                             <p class="portfolio-overlay">Ресурс пропонує комплексні пропозиції з різним рівнем
                                 функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про
                                 компанію чи приватну особу.</p>
@@ -78,7 +113,15 @@
 
                     <li class="portfolio-item">
                         <div class="portfolio-thumb">
-                            <img src="../img/imgseafood.png" alt="Ресторан Seafood" width="370">
+                            <picture>
+                                <source srcset="../img/desktop/seafood-desktop@1x.webp 1x, ../img/desktop/seafood-desktop@2x.webp 2x "
+                                    media="(min-width:1200px)">
+                                <source srcset="../img/tablet/seafood-desktop@1x.webp 1x, ../img/tablet/seafood-tablet@2x.webp 2x "
+                                    media="(min-width:768px)">
+                                <source srcset="../img/mobile/seafood-desktop@1x.webp 1x, ../img/mobile/seafood-mobile@2x.webp 2x "
+                                    media="(max-width:767px)">
+                                <img src="../img/seafood.webp" alt="Ресторан Seafood" width="370">
+                            </picture>
                             <p class="portfolio-overlay">Ресурс пропонує комплексні пропозиції з різним рівнем
                                 функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про
                                 компанію чи приватну особу.</p>
@@ -91,7 +134,12 @@
 
                     <li class="portfolio-item">
                         <div class="portfolio-thumb">
-                            <img src="../img/imgheadphones.png" alt="Проєкт Prime" width="370">
+                            <picture>
+                                <source srcset="../img/desktop/headphones-desktop@1x.webp 1x, ../img/desktop/headphones-desktop@2x.webp 2x " media="(min-width:1200px)">
+                                <source srcset="../img/tablet/headphones-desktop@1x.webp 1x, ../img/tablet/headphones-tablet@2x.webp 2x " media="(min-width:768px)">
+                                <source srcset="../img/mobile/headphones-desktop@1x.webp 1x, ../img/mobile/headphones-mobile@2x.webp 2x " media="(max-width:767px)">
+                                <img src="../img/headphones.webp" alt="Проєкт Prime" width="370">
+                            </picture>
                             <p class="portfolio-overlay">Ресурс пропонує комплексні пропозиції з різним рівнем
                                 функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про
                                 компанію чи приватну особу.</p>
@@ -104,7 +152,12 @@
 
                     <li class="portfolio-item">
                         <div class="portfolio-thumb">
-                            <img src="../img/imgboxes.png" alt="Проєкт Boxes" width="370">
+                            <picture>
+                                <source srcset="../img/desktop/boxes-desktop@1x.webp 1x, ../img/desktop/boxes-desktop@2x.webp 2x " media="(min-width:1200px)">
+                                <source srcset="../img/tablet/boxes-desktop@1x.webp 1x, ../img/tablet/boxes-tablet@2x.webp 2x " media="(min-width:768px)">
+                                <source srcset="../img/mobile/boxes-desktop@1x.webp 1x, ../img/mobile/boxes-mobile@2x.webp 2x " media="(max-width:767px)">
+                                <img src="../img/boxes.webp" alt="Проєкт Boxes" width="370">
+                            </picture>
                             <p class="portfolio-overlay">Ресурс пропонує комплексні пропозиції з різним рівнем
                                 функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про
                                 компанію чи приватну особу.</p>
@@ -117,7 +170,12 @@
 
                     <li class="portfolio-item">
                         <div class="portfolio-thumb">
-                            <img src="../img/imgmonitor.png" alt="Inspiration has no Borders" width="370">
+                            <picture>
+                                <source srcset="../img/desktop/monitor-desktop@1x.webp 1x, ../img/desktop/monitor-desktop@2x.webp 2x " media="(min-width:1200px)">
+                                <source srcset="../img/tablet/monitor-desktop@1x.webp 1x, ../img/tablet/monitor-tablet@2x.webp 2x " media="(min-width:768px)">
+                                <source srcset="../img/mobile/monitor-desktop@1x.webp 1x, ../img/mobile/monitor-mobile@2x.webp 2x " media="(max-width:767px)">
+                                <img src="../img/monitor.webp" alt="Inspiration has no Borders" width="370">
+                            </picture>
                             <p class="portfolio-overlay">Ресурс пропонує комплексні пропозиції з різним рівнем
                                 функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про
                                 компанію чи приватну особу.</p>
@@ -130,7 +188,12 @@
 
                     <li class="portfolio-item">
                         <div class="portfolio-thumb">
-                            <img src="../img/imgbooks.png" alt="Видання Limited Edition" width="370">
+                            <picture>
+                                <source srcset="../img/desktop/book-desktop@1x.webp 1x, ../img/desktop/book-desktop@2x.webp 2x" media="(min-width:1200px)">
+                                <source srcset="../img/tablet/book-desktop@1x.webp 1x, ../img/tablet/book-tablet@2x.webp 2x" media="(min-width:768px)">
+                                <source srcset="../img/mobile/book-desktop@1x.webp 1x, ../img/mobile/book-mobile@2x.webp 2x" media="(max-width:767px)">
+                                <img src="../img/book.webp" alt="Видання Limited Edition" width="370">
+                            </picture>
                             <p class="portfolio-overlay">Ресурс пропонує комплексні пропозиції з різним рівнем
                                 функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про
                                 компанію чи приватну особу.</p>
@@ -143,7 +206,12 @@
 
                     <li class="portfolio-item">
                         <div class="portfolio-thumb">
-                            <img src="../img/imgticket.png" alt="Проєкт LAB" width="370">
+                            <picture>
+                                <source srcset="../img/desktop/badge-desktop@1x.webp 1x, ../img/desktop/badge-desktop@2x.webp 2x " media="(min-width:1200px)">
+                                <source srcset="../img/tablet/badge-desktop@1x.webp 1x, ../img/tablet/badge-tablet@2x.webp 2x " media="(min-width:768px)">
+                                <source srcset="../img/mobile/badge-desktop@1x.webp 1x, ../img/mobile/badge-mobile@2x.webp 2x " media="(max-width:767px)">
+                                <img src="../img/badge.webp" alt="Проєкт LAB" width="370">
+                            </picture>
                             <p class="portfolio-overlay">Ресурс пропонує комплексні пропозиції з різним рівнем
                                 функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про
                                 компанію чи приватну особу.</p>
@@ -156,7 +224,12 @@
 
                     <li class="portfolio-item">
                         <div class="portfolio-thumb">
-                            <img src="../img/imgworkinginlaptop.png" alt="Growing Business" width="370">
+                            <picture>
+                                <source srcset="../img/desktop/business-desktop@1x.webp 1x, ../img/desktop/business-desktop@2x.webp 2x " media="(min-width:1200px)">
+                                <source srcset="../img/tablet/business-desktop@1x.webp 1x, ../img/tablet/business-tablet@2x.webp 2x " media="(min-width:768px)">
+                                <source srcset="../img/mobile/business-desktop@1x.webp 1x, ../img/mobile/business-mobile@2x.webp 2x " media="(max-width:767px)">
+                                <img src="../img/business.webp" alt="Growing Business" width="370">
+                            </picture>
                             <p class="portfolio-overlay">Ресурс пропонує комплексні пропозиції з різним рівнем
                                 функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про
                                 компанію чи приватну особу.</p>
@@ -172,32 +245,81 @@
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <a href="../index.html" class="footer-logo"><span class="footer-span">Web</span>Studio</a>
-            <address>
-                <ul class="footer-list">
-                    <li><a href="#" class="footer-address">м. Київ, пр-т Лесі Українки, 26</a></li>
-                    <li><a href="mailto:info@devstudio.com" class="footer-link">info@devstudio.com</a></li>
-                    <li><a href="tel:+380961111111" class="footer-link">+38 096 111 11 11</a></li>
+        <div class="container footer-container">
+            <div class="contacts-wrap">
+                <a href="../index.html" class="footer-logo"><span class="footer-span">Web</span>Studio</a>
+                <address class="footer-address-block">
+                    <ul class="footer-list">
+                        <li><a href="#" class="footer-address">м. Київ, пр-т Лесі Українки, 26</a></li>
+                        <li><a href="mailto:info@devstudio.com" class="footer-link">info@devstudio.com</a></li>
+                        <li><a href="tel:+380961111111" class="footer-link">+38 096 111 11 11</a></li>
+                    </ul>
+                </address>
+            </div>
+    
+            <div class="footer-social">
+                <h2 class="footer-title">ПРИЄДНУЙТЕСЬ</h2>
+                <ul class="footer-social-list">
+                    <li>
+                        <a href="#" class="footer-social-link" aria-label="Instagram">
+                            <svg class="footer-social-icon">
+                                <use href="../img/symbol-defs.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-social-link" aria-label="Twitter">
+                            <svg class="footer-social-icon">
+                                <use href="../img/symbol-defs.svg#twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-social-link" aria-label="Facebook">
+                            <svg class="footer-social-icon">
+                                <use href="../img/symbol-defs.svg#facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-social-link" aria-label="LinkedIn">
+                            <svg class="footer-social-icon">
+                                <use href="../img/symbol-defs.svg#linkedin"></use>
+                            </svg>
+                        </a>
+                    </li>
                 </ul>
-            </address>
+            </div>
+    
+            <div class="footer-subscribe">
+                <h2 class="footer-title">ПІДПИШІТЬСЯ НА РОЗСИЛКУ</h2>
+                <form class="footer-form">
+                    <input class="footer-input" type="email" name="email" placeholder="E-mail">
+                    <button class="footer-button" type="submit">
+                        Підписатися
+                        <svg class="footer-button-icon" aria-label="Send">
+                            <use href="../img/symbol-defs.svg#send"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
         </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button class="close" type="button" data-modal-close>X</button>
-    
+
             <ul class="mobile-menu">
                 <li><a href="../index.html" class="mobile-menu-link">Студія</a></li>
                 <li><a href="../pages/portfolio.html" class="mobile-menu-link current">Портфоліо</a></li>
                 <li><a href="#" class="mobile-menu-link last">Контакти</a></li>
             </ul>
-    
+
             <div class="mobile-contacts">
                 <a href="tel:+380961111111" class="mobile-tel">+38 096 111 11 11</a>
                 <a href="mailto:info@devstudio.com" class="mobile-email">info@devstudio.com</a>
             </div>
-    
+
             <ul class="mobile-socials">
                 <li><a href="#" class="mobile-social-link">Instagram</a></li>
                 <li><a href="#" class="mobile-social-link">Twitter</a></li>
