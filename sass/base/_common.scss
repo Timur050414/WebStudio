@@ -1,0 +1,138 @@
+@use "./variables" as *;
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: $main-color;
+}
+
+svg {
+  transition:
+    fill $anim-duration $anim-timing,
+    stroke $anim-duration $anim-timing;
+}
+
+.section_title {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+
+  @media (min-width: 1200px) {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+}
+
+.open_modal {
+  background-color: transparent;
+}
+
+.burger_icon {
+  width: 40px;
+  height: 40px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity $anim-duration $anim-timing,
+    visibility $anim-duration $anim-timing;
+  z-index: 100;
+
+  &.is_hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $title-color;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  font-size: 19px;
+}
+
+.mobile_menu {
+  &_link {
+    font-weight: 500;
+    font-size: 40px;
+    color: $main-color;
+    display: block;
+    margin-bottom: 32px;
+
+    &.current {
+      color: $accient-color;
+      margin-bottom: 35px;
+    }
+
+    &.last {
+      margin-bottom: 302px;
+    }
+  }
+}
+
+.mobile_tel {
+  display: block;
+  font-weight: 500;
+  font-size: 34px;
+  color: $accient-color;
+  letter-spacing: 0.68px;
+  margin-bottom: 32px;
+}
+
+.mobile_email {
+  display: block;
+  font-weight: 500;
+  font-size: 24px;
+  color: $text-color;
+  margin-bottom: 64px;
+  letter-spacing: 0.48px;
+}
+
+.mobile_socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  li:last-child .mobile_social_link {
+    border-right: none;
+  }
+}
+
+.mobile_social_link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.36px;
+  color: $accient-color;
+  padding-right: 10px;
+  border-right: 1px solid $border-right;
+}

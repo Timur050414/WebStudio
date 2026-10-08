@@ -1,0 +1,83 @@
+@use "../base/variables" as *;
+
+.team {
+  background-color: $team-background-color;
+  padding: 60px 0;
+
+  @media (min-width: 1200px) {
+    padding: 94px 0;
+  }
+
+  &_list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1200px) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  &_item {
+    background-color: $title-color;
+    border-radius: 0 0 4px 4px;
+    text-align: center;
+    box-shadow:
+      0 1px 3px 0 rgba(0, 0, 0, 0.12),
+      0 1px 1px 0 rgba(0, 0, 0, 0.14),
+      0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &_name {
+    margin: 30px 0 10px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &_role {
+    color: $text-color;
+    margin-bottom: 16px;
+  }
+
+  &_icons {
+    width: 20px;
+    height: 20px;
+    fill: $icons-fill;
+  }
+
+  &_contacts {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition:
+      color $anim-duration $anim-timing,
+      background-color $anim-duration $anim-timing,
+      border-color $anim-duration $anim-timing;
+
+    &:hover,
+    &:focus {
+      background: $accient-color;
+
+      .team_icons {
+        fill: $title-color;
+      }
+    }
+  }
+}
+
+.contacts_team_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}

@@ -1,0 +1,188 @@
+@use "../base/variables" as *;
+
+.portfolio {
+  padding: 60px 0;
+
+  @media (min-width: 1200px) {
+    padding: 94px 0;
+  }
+
+  &_list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
+
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(2, 3fr);
+    }
+
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(3, 3fr);
+    }
+  }
+
+  &_item {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    width: 450px;
+    transition:
+      transform $anim-duration $anim-timing,
+      box-shadow $anim-duration $anim-timing;
+
+    @media (min-width: 768px) {
+      max-width: 354px;
+    }
+
+    @media (min-width: 1200px) {
+      max-width: 370px;
+    }
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow:
+        0 1px 1px 0 rgba(0, 0, 0, 0.12),
+        0 4px 4px 0 rgba(0, 0, 0, 0.06),
+        1px 4px 6px 0 rgba(0, 0, 0, 0.16);
+
+      .portfolio_thumb img {
+        transform: scale(1.04);
+      }
+
+      .portfolio_overlay {
+        animation: slideUpOverlay $anim-duration $anim-timing forwards;
+      }
+    }
+  }
+
+  &_thumb {
+    position: relative;
+    overflow: hidden;
+    height: 294px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      transition: transform $anim-duration $anim-timing;
+
+      @media (min-width: 768px) {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $overlay-color;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 77px 24px;
+    letter-spacing: 0.54px;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(100%);
+
+    @media (min-width: 768px) {
+      padding: 49px 24px 77px;
+    }
+
+    @media (min-width: 1200px) {
+      padding: 63px 24px;
+    }
+  }
+
+  &_wrapper {
+    padding: 20px 24px;
+  }
+
+  &_name {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 2;
+    margin-bottom: 4px;
+
+    @media (min-width: 768px) {
+      color: $main-color;
+      font-family: Roboto, sans-serif;
+      line-height: 36px;
+      letter-spacing: 1.08px;
+    }
+  }
+
+  &_type {
+    color: $text-color;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.88;
+    letter-spacing: 0.48px;
+  }
+}
+
+.filter_list {
+  display: flex;
+  gap: 15px 8px;
+  flex-wrap: wrap;
+  max-width: 326px;
+  margin-bottom: 40px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    max-width: 575px;
+    gap: 8px;
+    margin: 0 auto 30px;
+  }
+
+  @media (min-width: 1200px) {
+    margin: 0 auto 50px;
+  }
+}
+
+.filter_btn {
+  background-color: $team-background-color;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  padding: 6px 22px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition:
+    background-color $anim-duration $anim-timing,
+    color $anim-duration $anim-timing,
+    box-shadow $anim-duration $anim-timing;
+
+  &.active,
+  &:hover,
+  &:focus {
+    background-color: $accient-color;
+    color: #fff;
+    box-shadow:
+      0 3px 1px 0 rgba(0, 0, 0, 0.1),
+      0 1px 2px 0 rgba(0, 0, 0, 0.08),
+      0 2px 2px 0 rgba(0, 0, 0, 0.12);
+  }
+}
+
+@keyframes slideUpOverlay {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(-5%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

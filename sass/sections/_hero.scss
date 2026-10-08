@@ -1,0 +1,89 @@
+@use "../base/variables" as *;
+
+.hero {
+  padding: 118px 0;
+  background-image:
+    linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../img/mobile/hero-mobile@1x.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image:
+      linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../img/mobile/hero-mobile@2x.webp);
+  }
+
+  @media (min-width: 768px) {
+    background-image:
+      linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../img/tablet/hero-tablet@1x.webp);
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image:
+        linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../img/tablet/hero-tablet@2x.webp);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    padding: 200px 0;
+    background-image:
+      linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../img/desktop/hero-desktop@1x.webp);
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image:
+        linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../img/desktop/hero-desktop@2x.webp);
+    }
+  }
+
+  &_title {
+    color: $title-color;
+    font-family: "Roboto", sans-serif;
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 42px;
+    letter-spacing: 1.56px;
+    text-transform: uppercase;
+    margin: 0 auto 30px;
+    max-width: 360px;
+
+    @media (min-width: 1200px) {
+      font-size: 44px;
+      line-height: 60px;
+      letter-spacing: 2.64px;
+      width: 696px;
+      max-width: 696px;
+    }
+  }
+
+  &_button {
+    background-color: $accient-color;
+    color: $title-color;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.96px;
+    border-radius: 4px;
+    padding: 10px 24px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    transition: background-color $anim-duration $anim-timing;
+
+    @media (min-width: 1200px) {
+      padding: 10px 32px;
+    }
+  }
+}

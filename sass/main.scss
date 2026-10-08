@@ -1,0 +1,16 @@
+@use "./base/reset";
+@use "./base/variables";
+@use "./base/container";
+@use "./base/common";
+
+@use "./utils/mixins";
+@use "./utils/placeholder";
+
+@use "./sections/header";
+@use "./sections/hero";
+@use "./sections/advantages";
+@use "./sections/work";
+@use "./sections/team";
+@use "./sections/clients";
+@use "./sections/portfolio";
+@use "./sections/footer";
